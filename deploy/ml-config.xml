@@ -437,26 +437,26 @@
   </certificates>
   <roles xmlns="http://marklogic.com/xdmp/security">
     <role>
-      <role-name>testDBA</role-name>
-      <description>A role being tested for a DBA use case</description>
+      <role-name>DBA-role</role-name>
+      <description>A role with more limited permissions than admin for a DBA to use</description>
       <role-names>
       </role-names>
       <permissions>
         <permission>
           <capability>execute</capability>
-          <role-name>testDBA</role-name>
+          <role-name>DBA-role</role-name>
         </permission>
         <permission>
           <capability>update</capability>
-          <role-name>testDBA</role-name>
+          <role-name>DBA-role</role-name>
         </permission>
         <permission>
           <capability>insert</capability>
-          <role-name>testDBA</role-name>
+          <role-name>DBA-role</role-name>
         </permission>
         <permission>
           <capability>read</capability>
-          <role-name>testDBA</role-name>
+          <role-name>DBA-role</role-name>
         </permission>
       </permissions>
       <collections>
@@ -736,7 +736,7 @@
       <description>A test dba user</description>
       <password>${testDBA-password}</password>
       <role-names>
-        <role-name>testDBA</role-name>
+        <role-name>DBA-role</role-name>
       </role-names>
       <permissions/>
       <collections/>
