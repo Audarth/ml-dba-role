@@ -10,8 +10,9 @@ declare function local:testcaseDeleteDB()
     function() {
         let $dbName := $c:disposable-db-name
         let $config := admin:get-configuration()
-        return
-        admin:database-delete($config, admin:database-get-id($config, $dbName))
+        let $config := admin:database-delete($config, admin:database-get-id($config, $dbName))
+        
+        return admin:save-configuration-without-restart($config)
     }
       , <options xmlns="xdmp:eval">
           <transaction-mode>update-auto-commit</transaction-mode>
