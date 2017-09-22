@@ -7,8 +7,8 @@ declare function local:testcaseClearDB()
 {
   xdmp:invoke-function(
     function() {
-        let $database := xdmp:database()
-        let $forestIDs := xdmp:database-forests($database)
+        let $forestName := $c:disposable-forest-name
+        let $forestIDs := xdmp:forest($forestName)
 
         return xdmp:forest-clear($forestIDs)
     }

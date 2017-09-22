@@ -33,3 +33,7 @@ declare variable $c:TEST-DBA as xs:string := "@ml.testDBA-username";
 declare variable $c:TEST-DBA-PASSWORD as xs:string := "@ml.testDBA-password";
 declare variable $c:database as xs:string := "@ml.test-content-db";
 
+declare variable $c:disposable-db-name := "testDatabaseForDBA";
+declare variable $c:disposable-forest-name := "testDatabaseForDBA-forest";
+
+

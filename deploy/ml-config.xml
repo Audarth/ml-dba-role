@@ -463,6 +463,7 @@
       </collections>
       <privileges>
         <privilege><privilege-name>admin-ui</privilege-name></privilege>
+        <privilege><privilege-name>admin-forest</privilege-name></privilege>
         <privilege><privilege-name>any-transaction-locks</privilege-name></privilege>
         <privilege><privilege-name>cancel-any-request</privilege-name></privilege>
         <privilege><privilege-name>cancel-my-requests</privilege-name></privilege>
