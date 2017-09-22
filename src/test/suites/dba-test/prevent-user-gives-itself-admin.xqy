@@ -5,6 +5,7 @@ import module namespace test="http://marklogic.com/roxy/test-helper" at "/test/t
 
 import module namespace admin = "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
 import module namespace sec="http://marklogic.com/xdmp/security" at "/MarkLogic/security.xqy";
+import module namespace util = "http://marklogic.com/roxy/test-util" at  "/test/util/utils.xqy";
 
 declare function local:giveMeAdmin()
 { 
@@ -16,7 +17,7 @@ declare function local:giveMeAdmin()
           <transaction-mode>update-auto-commit</transaction-mode>
           <isolation>different-transaction</isolation>
           <prevent-deadlocks>true</prevent-deadlocks>
-          <user-id>{xdmp:user($c:test-dba)}</user-id>
+          <user-id>{util:get-user($c:test-dba)}</user-id>
         </options>
   )
 };

@@ -4,6 +4,7 @@ import module namespace c = "http://marklogic.com/roxy/test-config" at "/test/te
 import module namespace test="http://marklogic.com/roxy/test-helper" at "/test/test-helper.xqy";
 
 import module namespace admin = "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import module namespace util = "http://marklogic.com/roxy/test-util" at  "/test/util/utils.xqy";
 
 declare function local:testcaseAccessDoc()
 { 
@@ -15,7 +16,7 @@ declare function local:testcaseAccessDoc()
           <transaction-mode>update-auto-commit</transaction-mode>
           <isolation>different-transaction</isolation>
           <prevent-deadlocks>true</prevent-deadlocks>
-          <user-id>{xdmp:user($c:test-dba)}</user-id>
+          <user-id>{util:get-user($c:test-dba)}</user-id>
         </options>
   )
 };
