@@ -10,13 +10,13 @@ declare function local:giveMeAdmin()
 { 
   xdmp:invoke-function(
     function() {
-          sec:user-set-roles($c:TEST-DBA, ("admin"))
+          sec:user-set-roles($c:test-dba, ("admin"))
     }
       , <options xmlns="xdmp:eval">
           <transaction-mode>update-auto-commit</transaction-mode>
           <isolation>different-transaction</isolation>
           <prevent-deadlocks>true</prevent-deadlocks>
-          <user-id>{xdmp:user($c:TEST-DBA)}</user-id>
+          <user-id>{xdmp:user($c:test-dba)}</user-id>
         </options>
   )
 };

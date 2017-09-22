@@ -437,26 +437,26 @@
   </certificates>
   <roles xmlns="http://marklogic.com/xdmp/security">
     <role>
-      <role-name>DBA-role</role-name>
+      <role-name>${dba-rolename}</role-name>
       <description>A role with more limited permissions than admin for a DBA to use</description>
       <role-names>
       </role-names>
       <permissions>
         <permission>
           <capability>execute</capability>
-          <role-name>DBA-role</role-name>
+          <role-name>${dba-rolename}</role-name>
         </permission>
         <permission>
           <capability>update</capability>
-          <role-name>DBA-role</role-name>
+          <role-name>${dba-rolename}</role-name>
         </permission>
         <permission>
           <capability>insert</capability>
-          <role-name>DBA-role</role-name>
+          <role-name>${dba-rolename}</role-name>
         </permission>
         <permission>
           <capability>read</capability>
-          <role-name>DBA-role</role-name>
+          <role-name>${dba-rolename}</role-name>
         </permission>
       </permissions>
       <collections>
@@ -732,16 +732,6 @@
     </role>
   </roles>
   <users xmlns="http://marklogic.com/xdmp/security">
-    <user>
-      <user-name>${testDBA-username}</user-name>
-      <description>A test dba user</description>
-      <password>${testDBA-password}</password>
-      <role-names>
-        <role-name>DBA-role</role-name>
-      </role-names>
-      <permissions/>
-      <collections/>
-    </user>
     <user>
       <user-name>${default-user}</user-name>
       <description>The default user for the ${app-name} application</description>

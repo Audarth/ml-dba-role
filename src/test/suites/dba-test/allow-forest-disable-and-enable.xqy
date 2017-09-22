@@ -25,7 +25,7 @@ declare function local:testcaseDisableForest()
         <transaction-mode>update-auto-commit</transaction-mode>
         <isolation>different-transaction</isolation>
         <prevent-deadlocks>true</prevent-deadlocks>
-        <user-id>{xdmp:user($c:TEST-DBA)}</user-id>
+        <user-id>{xdmp:user($c:test-dba)}</user-id>
       </options>
   )
 };
@@ -50,7 +50,7 @@ declare function local:testcaseEnableForest()
         <transaction-mode>update-auto-commit</transaction-mode>
         <isolation>different-transaction</isolation>
         <prevent-deadlocks>true</prevent-deadlocks>
-        <user-id>{xdmp:user($c:TEST-DBA)}</user-id>
+        <user-id>{xdmp:user($c:test-dba)}</user-id>
       </options>
   )
 };

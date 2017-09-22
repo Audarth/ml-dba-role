@@ -67,5 +67,21 @@ return
   } catch($exception) {
   }
 
+;
 
+(: create temp dba user :)
+import module namespace c = "http://marklogic.com/roxy/test-config" at "/test/test-config.xqy";
+import module namespace sec="http://marklogic.com/xdmp/security" at "/MarkLogic/security.xqy";
+
+xdmp:invoke-function(
+  function() {
+    sec:create-user($c:test-dba,"temorary user that will be deleted when test is finished", "tempPasswordThatShouldntExistVeryLong", $c:dba-rolename, (), ())
+    }
+      , <options xmlns="xdmp:eval">
+          <transaction-mode>update-auto-commit</transaction-mode>
+          <isolation>different-transaction</isolation>
+          <prevent-deadlocks>true</prevent-deadlocks>
+          <database>{xdmp:database("Security")}</database>
+        </options>
+  )
 

@@ -28,11 +28,9 @@ declare variable $c:TEST-USER-PASSWORD as xs:string :=
   if (fn:matches("@ml.test-user-password", "@")) then $c:PASSWORD
   else "@ml.test-user-password";
 
-  
-declare variable $c:TEST-DBA as xs:string := "@ml.testDBA-username";
-declare variable $c:TEST-DBA-PASSWORD as xs:string := "@ml.testDBA-password";
-declare variable $c:database as xs:string := "@ml.test-content-db";
+declare variable $c:dba-rolename as xs:string := "@ml.dba-rolename";
 
+declare variable $c:test-dba := "dba-test-user";
 declare variable $c:disposable-db-name := "testDatabaseForDBA";
 declare variable $c:disposable-forest-name := "testDatabaseForDBA-forest";
 

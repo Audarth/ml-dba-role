@@ -34,3 +34,21 @@ let $config := if(admin:forest-exists($config,  $forestName))
   
 (: Save the configuration :)
 return admin:save-configuration($config)
+
+;
+
+(: remove temp dba user :)
+import module namespace c = "http://marklogic.com/roxy/test-config" at "/test/test-config.xqy";
+import module namespace sec="http://marklogic.com/xdmp/security" at "/MarkLogic/security.xqy";
+
+xdmp:invoke-function(
+  function() {
+    sec:remove-user($c:test-dba)
+    }
+      , <options xmlns="xdmp:eval">
+          <transaction-mode>update-auto-commit</transaction-mode>
+          <isolation>different-transaction</isolation>
+          <prevent-deadlocks>true</prevent-deadlocks>
+          <database>{xdmp:database("Security")}</database>
+        </options>
+  )

@@ -16,8 +16,7 @@ declare function local:testcaseClearDB()
           <transaction-mode>update-auto-commit</transaction-mode>
           <isolation>different-transaction</isolation>
           <prevent-deadlocks>true</prevent-deadlocks>
-          <database>{xdmp:database($c:database)}</database>
-          <user-id>{xdmp:user($c:TEST-DBA)}</user-id>
+          <user-id>{xdmp:user($c:test-dba)}</user-id>
         </options>
   )
 };
