@@ -463,15 +463,19 @@
       </collections>
       <privileges>
         <privilege><privilege-name>admin-ui</privilege-name></privilege>
-        <privilege><privilege-name>admin-module-read</privilege-name></privilege>
+        <privilege><privilege-name>admin-forest</privilege-name></privilege>
+        <privilege><privilege-name>any-transaction-locks</privilege-name></privilege>
         <privilege><privilege-name>cancel-any-request</privilege-name></privilege>
         <privilege><privilege-name>cancel-my-requests</privilege-name></privilege>
         <privilege><privilege-name>complete-any-transactions</privilege-name></privilege>
         <privilege><privilege-name>complete-my-transactions</privilege-name></privilege>
         <privilege><privilege-name>count-builtins</privilege-name></privilege>
+        <privilege><privilege-name>environment-ui</privilege-name></privilege>
         <privilege><privilege-name>forget-any-xa-transactions</privilege-name></privilege>
         <privilege><privilege-name>forget-my-xa-transactions</privilege-name></privilege>
+        <privilege><privilege-name>get-appserver-logs</privilege-name></privilege>
         <privilege><privilege-name>manage</privilege-name></privilege>
+        <privilege><privilege-name>my-transaction-locks</privilege-name></privilege>
         <privilege><privilege-name>native-plugin</privilege-name></privilege>
         <privilege><privilege-name>prepare-any-xa-transactions</privilege-name></privilege>
         <privilege><privilege-name>prepare-my-xa-transactions</privilege-name></privilege>
@@ -501,6 +505,7 @@
         <privilege><privilege-name>xdmp:database-restore-cancel</privilege-name></privilege>
         <privilege><privilege-name>xdmp:database-restore-status</privilege-name></privilege>
         <privilege><privilege-name>xdmp:database-restore-validate</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:default-in-memory-geospatial-region-index-size</privilege-name></privilege>
         <privilege><privilege-name>xdmp:default-in-memory-limit</privilege-name></privilege>
         <privilege><privilege-name>xdmp:default-in-memory-list-size</privilege-name></privilege>
         <privilege><privilege-name>xdmp:default-in-memory-range-index-size</privilege-name></privilege>
@@ -565,9 +570,49 @@
         <privilege><privilege-name>xdmp:plan</privilege-name></privilege>
         <privilege><privilege-name>xdmp:pre-release-expires</privilege-name></privilege>
         <privilege><privilege-name>xdmp:read-cluster-config-file</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-assignments</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-assignments-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-ca-bundle</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-calendars</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-clusters</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-clusters-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-countries</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-database-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-databases</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-dtfmt-langauges</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-group-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-groups</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-host-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-hosts</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-keystore</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-keystore-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-languages</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-mimetypes</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-mimetypes-schema</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-security</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-server</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-tokenizer</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-cluster-config-file-user-languages</privilege-name></privilege>
         <privilege><privilege-name>xdmp:read-host-config-file</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-assignments</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-ca-bundle</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-calendars</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-clusters</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-countries</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-databases</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-dtfmt-langauges</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-groups</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-hosts</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-keystore</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-languages</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-mimetypes</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-security</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-server</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-tokenizer</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:read-host-config-file-user-languages</privilege-name></privilege>
         <privilege><privilege-name>xdmp:remove-orphaned-binary</privilege-name></privilege>
         <privilege><privilege-name>xdmp:restart</privilege-name></privilege>
+        <privilege><privilege-name>xdmp:rotate-log-files</privilege-name></privilege>
         <privilege><privilege-name>xdmp:server-backup</privilege-name></privilege>
         <privilege><privilege-name>xdmp:server-import-qualities</privilege-name></privilege>
         <privilege><privilege-name>xdmp:server-restore</privilege-name></privilege>
